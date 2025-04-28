@@ -1,0 +1,139 @@
+.cabecera {
+  background-color: #002147; /* Azul marino */
+  color: white;
+  padding: 20px;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.logo {
+  width: 60px;
+  height: auto;
+}
+
+@media (max-width: 600px) {
+  .logo {
+    width: 100px;
+  }
+}
+
+.titulo {
+  font-size: 1.5em;
+  margin: 0;
+}
+
+.slogan {
+  margin-top: 10px;
+  font-size: 1.1em;
+  color: #c5d4e3; /* Azul clarito */
+}
+
+
+.menu-nav {
+  margin-top: 15px;
+}
+
+.menu-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.menu-nav li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1em;
+  transition: color 0.3s;
+}
+
+.menu-nav li a:hover {
+  color: #c5d4e3; /* azul clarito cuando pasas el mouse */
+}
+
+
+.cabecera {
+  background-color: #002147; /* Azul marino */
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* Para que en celulares se acomode bonito */
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo {
+  width: 60px;
+  height: auto;
+}
+
+.titulo {
+  font-size: 1.5em;
+  margin: 0;
+}
+
+.menu-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 20px;
+}
+
+.menu-nav li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1em;
+  transition: color 0.3s;
+}
+
+.menu-nav li a:hover {
+  color: #c5d4e3; /* Azul clarito */
+}
+
+.slogan {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 1.1em;
+  color: #c5d4e3;
+}
+
+/* Responsivo para móviles */
+@media (max-width: 600px) {
+  .header-top {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .menu-nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .logo {
+    width: 80px; /* Un poco más grande en móvil */
+  }
+}

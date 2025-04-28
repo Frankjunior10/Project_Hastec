@@ -1,0 +1,26 @@
+.about-us {
+  padding: 20px;
+  background-color: #f4f4f4;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.about-us h2 {
+  color: #002147;
+  font-size: 2em;
+  text-align: center;
+}
+
+.about-us p {
+  font-size: 1.1em;
+  line-height: 1.6;
+}
+
+.about-us ul {
+  list-style: none;
+  padding: 0;
+}
+
+.about-us ul li {
+  margin: 10px 0;
+}

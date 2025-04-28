@@ -1,0 +1,58 @@
+<div class="home">
+
+  <header class="header-carousel">
+    <div class="carousel-container">
+      <img src="assets/images/banner1.jpg" alt="Banner 1" class="carousel-image active" />
+      <img src="assets/images/banner2.jpg" alt="Banner 2" class="carousel-image" />
+      <img src="assets/images/banner3.jpg" alt="Banner 3" class="carousel-image" />
+    </div>
+    <div class="carousel-text">
+      <h1>HASTEC</h1>
+      <p>Innovando con soluciones en Ingeniería</p>
+    </div>
+  </header>
+
+
+  <div class="background-circuit"></div> <!-- Fondo circuito aquí -->
+
+  <section id="servicios" class="services">
+    <h2>Nuestros Servicios</h2>
+
+    <div class="services-container">
+
+      <div class="service-item">
+        <a [routerLink]="['/instalaciones-electricas']">
+          <img src="assets/images/instalacion_electrica.jpg" alt="Instalaciones Eléctricas" />
+          <p>Instalaciones Eléctricas</p>
+        </a>
+      </div>
+
+      <div class="service-item">
+        <a [routerLink]="['/camaras-seguridad']">
+          <img src="assets/images/camaras_seguridad.jpg" alt="Cámaras de Sguridad(CCTV)" />
+          <p>Cámaras de Sguridad(CCTV)</p>
+        </a>
+      </div>
+
+      <div class="service-item">
+        <a [routerLink]="['/sistemas-computacionales']">
+          <img src="assets/images/sistemas_computacionales.jpg" alt="Sistemas Computacionales" />
+          <p>Sistemas Computacionales</p>
+        </a>
+      </div>
+
+      <div class="service-item">
+        <a [routerLink]="['/rebobinado-motores']">
+          <img src="assets/images/rebobinado_motores.jpg" alt="Rebobinado de Motores" />
+          <p>Rebobinado de Motores</p>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+
+</div>
+
+<app-footer></app-footer>
+

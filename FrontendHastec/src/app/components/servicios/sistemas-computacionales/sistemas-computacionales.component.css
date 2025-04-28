@@ -1,0 +1,109 @@
+.about-us {
+  padding: 20px;
+  background-color: #f4f4f4;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.about-us h2 {
+  color: #002147;
+  font-size: 2em;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.about-us p {
+  font-size: 1.1em;
+  line-height: 1.6;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.subservices {
+  margin-top: 20px;
+}
+
+.subservices h3 {
+  font-size: 1.5em;
+  color: #002147;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.subservices ul {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.subservices ul li {
+  margin: 10px 0;
+  font-size: 1.1em;
+  padding-left: 25px;
+  position: relative;
+}
+
+.subservices ul li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.cotizacion {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.cotizacion-button {
+  display: inline-flex;
+  align-items: center;
+  background-color: #25D366;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 1.1em;
+  transition: background-color 0.3s;
+}
+
+.cotizacion-button:hover {
+  background-color: #1ebe57;
+}
+
+.whatsapp-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+}
+
+
+
+.pricing {
+  background-color: #e8e8e8;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 30px auto;
+  max-width: 600px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.pricing h3 {
+  color: #002147;
+  font-size: 1.5em;
+  margin-bottom: 15px;
+}
+
+.pricing ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.pricing ul li {
+  font-size: 1.1em;
+  margin: 10px 0;
+}

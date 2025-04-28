@@ -1,0 +1,163 @@
+  /* home.component.css */
+
+
+  .home {
+    font-family: 'Arial', sans-serif;
+    background-color: white;
+    color: #000;
+    padding: 20px;
+  }
+
+  .header {
+    background-color: #002147; /* Azul marino */
+    color: white;
+    padding: 30px 20px;
+    border-radius: 10px;
+    text-align: center;
+  }
+
+  .logo {
+    width: 100px;
+    height: auto;
+    margin-bottom: 15px;
+  }
+
+  h1 {
+    font-size: 2.5em;
+    margin: 0;
+  }
+
+  .slogan {
+    font-size: 1.2em;
+    margin-top: 10px;
+    color: #9db4d3; /* Un celeste suave */
+  }
+
+  .services {
+    margin-top: 40px;
+  }
+
+  .services h2 {
+    font-size: 2em;
+    color: #002147;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .service-item {
+    margin: 20px auto;
+    width: 300px;
+    text-align: center;
+  }
+
+  .service-item img {
+    width: 200%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  }
+
+  .service-item p {
+    margin-top: 10px;
+    font-size: 1.2em;
+    color: #000;
+  }
+
+  .header-carousel {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+  }
+
+  .carousel-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+
+  .carousel-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+
+  .carousel-image.active {
+    opacity: 1;
+  }
+
+  .carousel-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  }
+
+  .services-container {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding: 20px 0;
+    scroll-snap-type: x mandatory;
+  }
+
+  .service-item {
+    flex: 0 0 auto;
+    scroll-snap-align: center;
+    background: #f9f9f9;
+    border-radius: 10px;
+    padding: 10px;
+    width: 250px; /* ancho fijo para cada tarjeta */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+  }
+
+  .service-item:hover {
+    transform: scale(1.05);
+  }
+
+  .service-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+
+  .background-circuit {
+    position: absolute;
+    top: 400px; /* Desde después del header */
+    left: 0;
+    width: 100%;
+    height: calc(100% - 400px - 200px); /* Hasta antes del footer */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='800' viewBox='0 0 800 800'%3E%3Cg stroke='%23007BFF' stroke-width='2' fill='none' opacity='0.1'%3E%3Cpath d='M10 10 H100 V100 H200 V200' /%3E%3Cpath d='M300 50 V150 H400 V250' /%3E%3Ccircle cx='200' cy='200' r='5' fill='%23007BFF' /%3E%3Cpath d='M500 100 H600 V200 H700' /%3E%3Ccircle cx='600' cy='200' r='5' fill='%23007BFF' /%3E%3Cpath d='M100 300 H200 V400 H300' /%3E%3Ccircle cx='200' cy='400' r='5' fill='%23007BFF' /%3E%3C/g%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    z-index: 0;
+    pointer-events: none;
+  }
+
+
+
+  a {
+    text-decoration: none; /* Elimina la línea debajo del enlace */
+  }
+
+  a:hover {
+    text-decoration: none; /* También elimina el subrayado al pasar el ratón por encima */
+  }
+
+  a:focus {
+    text-decoration: none; /* Elimina el subrayado cuando el enlace tiene el foco */
+  }
+
+
+
+
