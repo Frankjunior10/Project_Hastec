@@ -7,6 +7,7 @@ import { CamarasSeguridadComponent } from './components/servicios/camaras-seguri
 import { SistemasComputacionalesComponent } from './components/servicios/sistemas-computacionales/sistemas-computacionales.component';
 import { RebobinadoMotoresComponent } from './components/servicios/rebobinado-motores/rebobinado-motores.component';
 import { ProductosComponent } from './components/productos/productos.component';
+import { SaleReceiptComponent } from './components/sale-receipt/sale-receipt.component';
 
 const routes: Routes = [
 
@@ -18,6 +19,8 @@ const routes: Routes = [
   {path: 'sistemas-computacionales', component: SistemasComputacionalesComponent},
   {path: 'rebobinado-motores', component: RebobinadoMotoresComponent},
   {path: 'productos', component: ProductosComponent},
+  {path: 'sale-receipt', component: SaleReceiptComponent},
+
 
 
 ];

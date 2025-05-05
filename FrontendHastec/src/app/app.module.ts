@@ -14,6 +14,9 @@ import { CamarasSeguridadComponent } from './components/servicios/camaras-seguri
 import { SistemasComputacionalesComponent } from './components/servicios/sistemas-computacionales/sistemas-computacionales.component';
 import { RebobinadoMotoresComponent } from './components/servicios/rebobinado-motores/rebobinado-motores.component';
 import { ProductosComponent } from './components/productos/productos.component';
+//import { SaleReceiptComponentComponent } from './components/sale-receipt-component/sale-receipt-component.component';
+import { SaleReceiptComponent } from './components/sale-receipt/sale-receipt.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -30,11 +33,15 @@ import { ProductosComponent } from './components/productos/productos.component';
     SistemasComputacionalesComponent,
     RebobinadoMotoresComponent,
     ProductosComponent,
+    //SaleReceiptComponentComponent,
+    SaleReceiptComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     MaterialModule,
+    HttpClientModule,
+
 
 
 
