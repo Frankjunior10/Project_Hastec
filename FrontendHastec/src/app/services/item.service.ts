@@ -38,4 +38,6 @@ export class ItemService {
   deleteItem(id: number): Observable<void> {
     return this.http.delete<void>(`${this.ruta_servidor}/${this.recurso}/${id}`);
   }
+
+
 }

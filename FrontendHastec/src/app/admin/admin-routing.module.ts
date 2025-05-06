@@ -4,19 +4,22 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { VentasComponent } from './ventas/ventas.component';
 import { HistorialComponent } from './historial/historial.component';
 import { AdminComponent } from './admin/admin.component';
+import { RegisterItemComponent } from './register-item/register-item.component';
 
 const routes: Routes = [
-  { path: 'dashboard', component: DashboardComponent },
-  { path: 'ventas', component: VentasComponent },
-  { path: 'historial', component: HistorialComponent },
-  { path: 'admin', component: AdminComponent },
-
-
-
+  {
+    path: '', component: AdminComponent, // AdminComponent como contenedor principal
+    children: [
+      { path: 'dashboard', component: DashboardComponent },
+      { path: 'ventas', component: VentasComponent },
+      { path: 'historial', component: HistorialComponent },
+      { path: 'register-item', component: RegisterItemComponent }
+    ]
+  }
 ];
 
 @NgModule({
-  imports: [RouterModule.forChild(routes)],
+  imports: [RouterModule.forChild(routes)],  // Importamos las rutas hijas usando forChild
   exports: [RouterModule]
 })
 export class AdminRoutingModule { }

@@ -17,7 +17,7 @@ export class RegisterItemComponent implements OnInit {
     price: 0,
     stock: 0,
     lowStockThreshold: 0,
-    categoryId: 0
+    category: { id: 0, name: '' } // Usamos un objeto completo para la categoría
   };
 
   categorias: Category[] = [];
@@ -35,7 +35,7 @@ export class RegisterItemComponent implements OnInit {
   }
 
   registrarItem(): void {
-    if (!this.item.name || !this.item.price || !this.item.stock || !this.item.categoryId) {
+    if (!this.item.name || !this.item.price || !this.item.stock || !this.item.category.id) {
       alert('Completa los campos requeridos');
       return;
     }
@@ -60,7 +60,7 @@ export class RegisterItemComponent implements OnInit {
       price: 0,
       stock: 0,
       lowStockThreshold: 0,
-      categoryId: 0
+      category: { id: 0, name: '' }
     };
   }
 }

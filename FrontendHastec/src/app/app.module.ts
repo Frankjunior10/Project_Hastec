@@ -17,6 +17,10 @@ import { ProductosComponent } from './components/productos/productos.component';
 //import { SaleReceiptComponentComponent } from './components/sale-receipt-component/sale-receipt-component.component';
 import { SaleReceiptComponent } from './components/sale-receipt/sale-receipt.component';
 import { HttpClientModule } from '@angular/common/http';
+import { RouterModule } from '@angular/router';
+import { AdminRoutingModule } from './admin/admin-routing.module';
+import { AdminModule } from './admin/admin.module';
+
 
 
 
@@ -41,9 +45,9 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     MaterialModule,
     HttpClientModule,
-
-
-
+    RouterModule.forRoot([]), // o tu configuración real
+    AdminRoutingModule,
+    AdminModule
 
   ],
   providers: [

@@ -5,5 +5,10 @@ export interface Item {
   price: number;
   stock: number;
   lowStockThreshold: number;
-  categoryId: number;  // O puedes usar un objeto completo si prefieres
+  category: Category; // Cambiado de categoryId a category
+}
+
+export interface Category {
+  id: number;
+  name: string;
 }

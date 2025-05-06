@@ -12,6 +12,7 @@ import { DashboardComponent } from './admin/dashboard/dashboard.component';
 import { VentasComponent } from './admin/ventas/ventas.component';
 import { HistorialComponent } from './admin/historial/historial.component';
 import { AdminComponent } from './admin/admin/admin.component';
+import { RegisterItemComponent } from './admin/register-item/register-item.component';
 
 const routes: Routes = [
 
@@ -26,11 +27,19 @@ const routes: Routes = [
   {path: 'sale-receipt', component: SaleReceiptComponent},
 
 
-    // Rutas privadas (Admin)
-    { path: 'admin/dashboard', component: DashboardComponent },
-    { path: 'admin/ventas', component: VentasComponent },
-    { path: 'admin/historial', component: HistorialComponent },
-    { path: 'admin', component: AdminComponent },
+  // RUTA PADRE (usa router-outlet en admin.component.html)
+  {
+    path: 'admin',
+    component: AdminComponent,
+    children: [
+      { path: 'dashboard', component: DashboardComponent },
+      { path: 'ventas', component: VentasComponent },
+      { path: 'historial', component: HistorialComponent },
+      { path: 'register-item', component: RegisterItemComponent }
+
+      // puedes agregar más hijos aquí
+    ]
+  }
 
 
 ];
