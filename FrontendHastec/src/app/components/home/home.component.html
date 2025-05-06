@@ -1,19 +1,36 @@
 <div class="home">
 
-  <header class="header-carousel">
-    <div class="carousel-container">
-      <img src="assets/images/banner1.jpg" alt="Banner 1" class="carousel-image active" />
-      <img src="assets/images/banner2.jpg" alt="Banner 2" class="carousel-image" />
-      <img src="assets/images/banner3.jpg" alt="Banner 3" class="carousel-image" />
-    </div>
+
+  <div class="swiper">
     <div class="carousel-text">
       <h1>HASTEC</h1>
       <p>Innovando con soluciones en Ingeniería</p>
     </div>
-  </header>
+
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <img src="assets/images/banner1.jpg" alt="Banner 1">
+      </div>
+      <div class="swiper-slide">
+        <img src="assets/images/banner2.jpg" alt="Banner 2">
+      </div>
+      <div class="swiper-slide">
+        <img src="assets/images/banner3.jpg" alt="Banner 3">
+      </div>
+    </div>
+
+    <!-- Si quieres botones de navegación -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+
+    <!-- Si quieres paginación -->
+    <div class="swiper-pagination"></div>
 
 
-  <div class="background-circuit"></div> <!-- Fondo circuito -->
+  </div>
+
+
+  <div class="background-circuit"></div> <!-- Fondo circuito aquí -->
 
   <section id="servicios" class="services">
     <h2>Nuestros Servicios</h2>
@@ -55,4 +72,3 @@
 </div>
 
 <app-footer></app-footer>
-

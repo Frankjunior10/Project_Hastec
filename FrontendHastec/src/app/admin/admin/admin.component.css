@@ -1,0 +1,95 @@
+.admin-layout {
+  display: flex;
+  min-height: calc(100vh - 70px); /* Asumiendo header de 70px */
+  background-color: #f8f9fc;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding-top: 20px;
+  gap: 20px;
+}
+
+/* SIDEBAR */
+.sidebar {
+  width: 180px;
+  background-color: #002147;
+  color: white;
+  padding: 30px 20px;
+  border-radius: 10px;
+  margin-left: 20px;
+  height: fit-content;
+  align-self: flex-start;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  position: sticky;
+  top: 80px;
+}
+
+.sidebar-title {
+  font-size: 1.8em;
+  margin-bottom: 30px;
+  text-align: center;
+  border-bottom: 2px solid #c5d4e3;
+  padding-bottom: 10px;
+}
+
+.sidebar-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-menu li {
+  margin-bottom: 15px;
+}
+
+.sidebar-menu a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  display: block;
+  padding: 10px 15px;
+  border-radius: 6px;
+  transition: all 0.3s;
+}
+
+.sidebar-menu a:hover,
+.sidebar-menu a.active {
+  background-color: #c5d4e3;
+  color: #002147;
+}
+
+/* CONTENIDO */
+.admin-content {
+  flex: 1;
+  background-color: white;
+  border-radius: 12px;
+  padding: 40px;
+  margin-right: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Título general del contenido */
+.admin-content h1 {
+  font-size: 2em;
+  margin-bottom: 25px;
+  color: #002147;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .admin-layout {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .sidebar {
+    width: 100%;
+    margin: 0;
+    border-radius: 10px;
+    top: unset;
+    position: relative;
+  }
+
+  .admin-content {
+    margin: 20px 0 0 0;
+    padding: 25px;
+  }
+}

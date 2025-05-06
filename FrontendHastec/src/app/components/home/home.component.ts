@@ -1,10 +1,11 @@
-import { Component, AfterViewInit, Inject, PLATFORM_ID, OnInit  } from '@angular/core';
-
+import { Component, AfterViewInit, Inject, PLATFORM_ID } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
-
-
-
-
+import Swiper from 'swiper/bundle';
+import 'swiper/css/bundle';
+import { Navigation, Pagination } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 
 @Component({
   selector: 'app-home',
@@ -17,16 +18,17 @@ export class HomeComponent implements AfterViewInit {
 
   ngAfterViewInit() {
     if (isPlatformBrowser(this.platformId)) {
-      let currentSlide = 0;
-      const slides = document.querySelectorAll('.carousel-image') as NodeListOf<HTMLImageElement>;
-
-      setInterval(() => {
-        slides[currentSlide].classList.remove('active');
-        currentSlide = (currentSlide + 1) % slides.length;
-        slides[currentSlide].classList.add('active');
-      }, 4000);
+      const swiper = new Swiper('.swiper', {
+        modules: [Navigation, Pagination],
+        navigation: true,
+        pagination: { clickable: true },
+        autoplay: {
+          delay: 4000, // Cambia cada 4 segundos
+          disableOnInteraction: false, // Sigue autoplay aunque toquen botones
+        },
+        loop: true, // Para que regrese al primer slide al terminar
+      });
     }
   }
-
 
 }

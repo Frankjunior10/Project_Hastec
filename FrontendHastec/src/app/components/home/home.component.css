@@ -158,6 +158,28 @@
     text-decoration: none; /* Elimina el subrayado cuando el enlace tiene el foco */
   }
 
+  /* Agrega esto: */
+  .swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 2s ease; /* transicion suave */
+    transform: scale(1.1); /* empezamos un poquito más grande */
+  }
 
+  .swiper-slide-active img {
+    transform: scale(1); /* al estar activa, regresa a tamaño normal */
+  }
 
+  .swiper {
+    width: 90%;
+    max-width: 900px;
+    height: 400px;
+    margin: 0 auto;
+  }
 
+  .swiper-slide {
+    overflow: hidden;
+    border-radius: 10px;
+  }

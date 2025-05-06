@@ -8,6 +8,10 @@ import { SistemasComputacionalesComponent } from './components/servicios/sistema
 import { RebobinadoMotoresComponent } from './components/servicios/rebobinado-motores/rebobinado-motores.component';
 import { ProductosComponent } from './components/productos/productos.component';
 import { SaleReceiptComponent } from './components/sale-receipt/sale-receipt.component';
+import { DashboardComponent } from './admin/dashboard/dashboard.component';
+import { VentasComponent } from './admin/ventas/ventas.component';
+import { HistorialComponent } from './admin/historial/historial.component';
+import { AdminComponent } from './admin/admin/admin.component';
 
 const routes: Routes = [
 
@@ -21,6 +25,12 @@ const routes: Routes = [
   {path: 'productos', component: ProductosComponent},
   {path: 'sale-receipt', component: SaleReceiptComponent},
 
+
+    // Rutas privadas (Admin)
+    { path: 'admin/dashboard', component: DashboardComponent },
+    { path: 'admin/ventas', component: VentasComponent },
+    { path: 'admin/historial', component: HistorialComponent },
+    { path: 'admin', component: AdminComponent },
 
 
 ];
