@@ -13,6 +13,7 @@ import { VentasComponent } from './admin/ventas/ventas.component';
 import { HistorialComponent } from './admin/historial/historial.component';
 import { AdminComponent } from './admin/admin/admin.component';
 import { RegisterItemComponent } from './admin/register-item/register-item.component';
+import { ItemsComponent } from './admin/items/items.component';
 
 const routes: Routes = [
 
@@ -28,6 +29,7 @@ const routes: Routes = [
 
 
   // RUTA PADRE (usa router-outlet en admin.component.html)
+
   {
     path: 'admin',
     component: AdminComponent,
@@ -35,9 +37,11 @@ const routes: Routes = [
       { path: 'dashboard', component: DashboardComponent },
       { path: 'ventas', component: VentasComponent },
       { path: 'historial', component: HistorialComponent },
-      { path: 'register-item', component: RegisterItemComponent }
+      { path: 'register-item', component: RegisterItemComponent },
+      { path: 'items', component: ItemsComponent }
 
       // puedes agregar más hijos aquí
+
     ]
   }
 

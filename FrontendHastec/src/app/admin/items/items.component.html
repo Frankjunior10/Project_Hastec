@@ -1,0 +1,77 @@
+<div class="productos-container">
+  <h1>Items</h1>
+
+  <!-- Filtro combinado: sede + búsqueda -->
+  <div class="filter-section" style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px;">
+    <label for="sede-select">Seleccionar Sede:</label>
+    <select [(ngModel)]="selectedSede" (change)="filterItems()">
+      <option [ngValue]="null">Todas las sedes</option>
+      <option *ngFor="let sede of sedes" [ngValue]="sede.id">{{ sede.nombre }}</option>
+    </select>
+
+    <input
+      type="text"
+      placeholder="Buscar items..."
+      [(ngModel)]="searchText"
+      (input)="filterItems()"
+      style="padding: 4px 8px; font-size: 14px; flex-grow: 1;"
+    />
+  </div>
+
+  <!-- Tabla de items -->
+  <div class="tabla-items">
+    <table>
+      <thead>
+        <tr>
+          <th>Imagen</th>
+          <th>Nombre</th>
+          <th>Descripción</th>
+          <th>Precio</th>
+          <th>Stock</th>
+          <th>Código</th>
+          <th>Marca</th>
+          <th>Color</th>
+          <th>Proveedor</th>
+          <th>Ubicación</th>
+          <th>Estado</th>
+          <th>Activo</th>
+          <th>Sede</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of itemsFiltrados">
+          <td>
+            <img *ngIf="item.imageUrl" [src]="'http://localhost:8080' + item.imageUrl + '?t=' + now" alt="{{ item.name }}" class="imagen-miniatura">
+
+          </td>
+          <td>{{ item.name }}</td>
+          <td>
+            <div *ngIf="!item.expandirDescripcion">
+              {{ item.description | slice:0:10 }}...
+              <a href="#" (click)="item.expandirDescripcion = true; $event.preventDefault()">Ver más</a>
+            </div>
+            <div *ngIf="item.expandirDescripcion">
+              {{ item.description }}
+              <a href="#" (click)="item.expandirDescripcion = false; $event.preventDefault()">Ver menos</a>
+            </div>
+          </td>
+          <td>S/ {{ item.price | number: '1.2-2' }}</td>
+          <td>{{ item.stock }}</td>
+          <td>{{ item.code }}</td>
+          <td>{{ item.brand }}</td>
+          <td>{{ item.color }}</td>
+          <td>{{ item.proveedor }}</td>
+          <td>{{ item.ubicacion }}</td>
+          <td>{{ item.estado }}</td>
+          <td>{{ item.esActivo ? 'Sí' : 'No' }}</td>
+          <td>{{ item.sede?.nombre }}</td>
+          <td>
+            <button (click)="editarItem(item)">Editar</button>
+            <button (click)="eliminarItem(item.id)">Eliminar</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

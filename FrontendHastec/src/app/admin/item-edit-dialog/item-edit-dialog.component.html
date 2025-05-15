@@ -1,0 +1,53 @@
+<div class="dialog-container">
+  <h2 mat-dialog-title class="dialog-title">Editar Ítem</h2>
+
+  <div mat-dialog-content>
+    <form class="form-layout">
+      <mat-form-field appearance="outline" class="input-field">
+        <mat-label>Nombre</mat-label>
+        <input matInput [(ngModel)]="data.name" name="name" required>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="input-field">
+        <mat-label>Descripción</mat-label>
+        <textarea matInput rows="3" [(ngModel)]="data.description" name="description"></textarea>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="input-field">
+        <mat-label>Precio</mat-label>
+        <input matInput type="number" [(ngModel)]="data.price" name="price" required>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="input-field">
+        <mat-label>Stock</mat-label>
+        <input matInput type="number" [(ngModel)]="data.stock" name="stock" required>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="input-field">
+        <mat-label>Estado</mat-label>
+        <mat-select [(ngModel)]="data.estado" name="estado" required>
+          <mat-option value="">-- Selecciona el estado --</mat-option>
+          <mat-option value="Nuevo">Nuevo</mat-option>
+          <mat-option value="Segunda">Segunda</mat-option>
+          <mat-option value="Reparado">Reparado</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <!-- Imagen -->
+      <div class="input-field">
+        <label for="imageInput">Imagen:</label>
+        <input type="file" id="imageInput" (change)="onFileSelected($event)" accept="image/*">
+      </div>
+
+      <!-- Vista previa -->
+      <div *ngIf="previewUrl" style="margin-top: 8px;">
+        <img [src]="previewUrl" alt="Vista previa" style="max-width: 100%; border-radius: 8px;">
+      </div>
+    </form>
+  </div>
+
+  <div mat-dialog-actions align="end" class="dialog-actions">
+    <button mat-stroked-button color="warn" (click)="cancelar()">Cancelar</button>
+    <button mat-flat-button color="primary" (click)="guardarCambios()">Guardar</button>
+  </div>
+</div>

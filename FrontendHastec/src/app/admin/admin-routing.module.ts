@@ -5,6 +5,7 @@ import { VentasComponent } from './ventas/ventas.component';
 import { HistorialComponent } from './historial/historial.component';
 import { AdminComponent } from './admin/admin.component';
 import { RegisterItemComponent } from './register-item/register-item.component';
+import { ItemsComponent } from './items/items.component';
 
 const routes: Routes = [
   {
@@ -13,7 +14,10 @@ const routes: Routes = [
       { path: 'dashboard', component: DashboardComponent },
       { path: 'ventas', component: VentasComponent },
       { path: 'historial', component: HistorialComponent },
-      { path: 'register-item', component: RegisterItemComponent }
+      { path: 'register-item', component: RegisterItemComponent },
+      { path: 'items', component: ItemsComponent }
+
+
     ]
   }
 ];

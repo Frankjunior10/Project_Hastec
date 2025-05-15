@@ -1,1 +1,18 @@
-<p>productos works!</p>
+<div class="productos-container">
+  <h2 class="titulo-productos">Nuestros Productos</h2>
+  <div class="grid-productos">
+    <div *ngFor="let item of items" class="producto-card">
+      <img *ngIf="item.imageUrl" [src]="'http://localhost:8080' + item.imageUrl" alt="{{ item.name }}" class="producto-imagen" />
+      <h3>{{ item.name }}</h3>
+      <p class="precio">S/ {{ item.price | number: '1.2-2' }}</p>
+      <p class="descripcion">{{ item.description }}</p>
+
+      <!-- Botón de WhatsApp -->
+      <a [href]="getWhatsappLink(item)" target="_blank" class="cotizacion-button">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="whatsapp-icon">
+        Cotizar vía WhatsApp
+      </a>
+
+    </div>
+  </div>
+</div>

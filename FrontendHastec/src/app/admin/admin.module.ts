@@ -8,7 +8,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AdminComponent } from './admin/admin.component';
 import { RegisterItemComponent } from './register-item/register-item.component';
 import { RouterModule } from '@angular/router';
-import { AdminRoutingModule } from './admin-routing.module'; // Asegúrate de tener este archivo
+import { AdminRoutingModule } from './admin-routing.module';
+import { ItemsComponent } from './items/items.component';
+import { ItemEditDialogComponent } from './item-edit-dialog/item-edit-dialog.component'; // Asegúrate de tener este archivo
+import { MaterialModule } from '../modules/material/material.module';
 
 
 
@@ -19,6 +22,9 @@ import { AdminRoutingModule } from './admin-routing.module'; // Asegúrate de te
     HistorialComponent,
     AdminComponent,
     RegisterItemComponent,
+    ItemsComponent,
+    ItemEditDialogComponent,
+
 
 
   ],
@@ -28,6 +34,7 @@ import { AdminRoutingModule } from './admin-routing.module'; // Asegúrate de te
     ReactiveFormsModule,
     FormsModule,
     RouterModule,
+    MaterialModule
 
   ]
 })

@@ -1,0 +1,42 @@
+.tabla-items table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background-color: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.tabla-items th, .tabla-items td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.tabla-items th {
+  background-color: #f4f6f9;
+  font-weight: bold;
+}
+
+.imagen-miniatura {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.tabla-items button {
+  margin-right: 8px;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background-color: #007BFF;
+  color: white;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.tabla-items button:hover {
+  background-color: #0056b3;
+}
