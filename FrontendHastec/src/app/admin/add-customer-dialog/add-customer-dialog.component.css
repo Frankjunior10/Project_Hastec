@@ -1,0 +1,48 @@
+.customer-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  padding: 24px 16px;
+  box-sizing: border-box;
+  max-height: 70vh;
+  overflow-y: auto;
+  background-color: #fafafa;
+  border-radius: 12px;
+}
+
+mat-form-field {
+  width: 100%;
+}
+
+.dialog-title {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #1a1a1a;
+  border-bottom: 2px solid #e0e0e0;
+  padding-bottom: 8px;
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  padding: 8px 16px;
+  background-color: #f5f5f5;
+  border-top: 1px solid #e0e0e0;
+  border-radius: 0 0 12px 12px;
+}
+
+/* Mejora en los botones */
+button[mat-button] {
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+/* Estilo de los errores */
+mat-error {
+  font-size: 13px;
+  color: #d32f2f;
+  margin-top: 4px;
+}

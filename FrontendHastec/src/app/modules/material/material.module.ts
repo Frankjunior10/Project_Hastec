@@ -16,9 +16,10 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatNativeDateModule } from '@angular/material/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatProgressBarModule } from '@angular/material/progress-bar'; // Importa el módulo
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import {MatAutocompleteModule} from '@angular/material/autocomplete';
 
 
 @NgModule({
@@ -44,8 +45,11 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
     MatNativeDateModule,
     FormsModule,
     MatProgressBarModule,
-    MatCardModule,
     MatProgressSpinnerModule,
+    MatIconModule,
+    ReactiveFormsModule,
+    MatAutocompleteModule,
+
 
 
   ],
@@ -70,6 +74,8 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
     FormsModule,
     MatProgressBarModule,
     MatProgressSpinnerModule,
+    ReactiveFormsModule,
+    MatAutocompleteModule,
 
 
   ]

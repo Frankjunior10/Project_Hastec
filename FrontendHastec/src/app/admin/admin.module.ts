@@ -12,6 +12,13 @@ import { AdminRoutingModule } from './admin-routing.module';
 import { ItemsComponent } from './items/items.component';
 import { ItemEditDialogComponent } from './item-edit-dialog/item-edit-dialog.component'; // Asegúrate de tener este archivo
 import { MaterialModule } from '../modules/material/material.module';
+import { AddCustomerDialogComponent } from './add-customer-dialog/add-customer-dialog.component';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { ToastComponent } from './toast/toast.component';
+import { CustomSnackbarComponent } from '../shared/custom-snackbar/custom-snackbar.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { SalesReportComponent } from './sales-report/sales-report.component';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
 
 
 
@@ -24,7 +31,10 @@ import { MaterialModule } from '../modules/material/material.module';
     RegisterItemComponent,
     ItemsComponent,
     ItemEditDialogComponent,
-
+    AddCustomerDialogComponent,
+    ToastComponent,
+    CustomSnackbarComponent,
+    SalesReportComponent,
 
 
   ],
@@ -34,7 +44,10 @@ import { MaterialModule } from '../modules/material/material.module';
     ReactiveFormsModule,
     FormsModule,
     RouterModule,
-    MaterialModule
+    MaterialModule,
+    MatSnackBarModule,
+    MatDialogModule,
+    MatAutocompleteModule,
 
   ]
 })

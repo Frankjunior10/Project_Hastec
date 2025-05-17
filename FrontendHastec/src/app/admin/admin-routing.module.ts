@@ -6,6 +6,7 @@ import { HistorialComponent } from './historial/historial.component';
 import { AdminComponent } from './admin/admin.component';
 import { RegisterItemComponent } from './register-item/register-item.component';
 import { ItemsComponent } from './items/items.component';
+import { SalesReportComponent } from './sales-report/sales-report.component';
 
 const routes: Routes = [
   {
@@ -15,8 +16,8 @@ const routes: Routes = [
       { path: 'ventas', component: VentasComponent },
       { path: 'historial', component: HistorialComponent },
       { path: 'register-item', component: RegisterItemComponent },
-      { path: 'items', component: ItemsComponent }
-
+      { path: 'items', component: ItemsComponent },
+      { path: 'sales-report', component: SalesReportComponent }
 
     ]
   }

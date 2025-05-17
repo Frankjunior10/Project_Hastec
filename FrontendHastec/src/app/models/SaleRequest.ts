@@ -1,6 +1,10 @@
+// models/SaleRequest.ts
 export interface SaleRequest {
   customerId: number;
-  items: SaleItem[];
+  items: {
+    itemId: number;
+    quantity: number;
+  }[];
 }
 
 export interface SaleItem {

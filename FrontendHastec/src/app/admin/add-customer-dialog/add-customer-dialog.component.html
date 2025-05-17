@@ -1,0 +1,54 @@
+<mat-dialog-content class="customer-form">
+ <h2 mat-dialog-title class="dialog-title">Registrar Cliente</h2>
+
+<form #form="ngForm" class="customer-form">
+  <mat-form-field appearance="outline">
+    <mat-label>Nombre</mat-label>
+    <input
+      matInput
+      name="name"
+      [(ngModel)]="customer.name"
+      required
+      minlength="3"
+      #name="ngModel"
+    />
+    <mat-error *ngIf="name.invalid && name.touched">
+      El nombre es obligatorio y debe tener al menos 3 caracteres.
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>DNI/RUC</mat-label>
+    <input
+      matInput
+      name="documentNumber"
+      [(ngModel)]="customer.documentNumber"
+      required
+      minlength="8"
+      maxlength="11"
+      #documentNumber="ngModel"
+    />
+    <mat-error *ngIf="documentNumber.invalid && documentNumber.touched">
+      Debe ingresar un número válido (mínimo 8, máximo 11 dígitos).
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Dirección</mat-label>
+    <input matInput name="address" [(ngModel)]="customer.address" />
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Teléfono</mat-label>
+    <input matInput name="phone" [(ngModel)]="customer.phone" />
+  </mat-form-field>
+</form>
+
+</mat-dialog-content>
+
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>Cancelar</button>
+  <button mat-button color="primary" (click)="save(form)">Guardar</button>
+</mat-dialog-actions>
+
+

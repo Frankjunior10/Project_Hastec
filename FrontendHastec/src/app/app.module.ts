@@ -20,6 +20,11 @@ import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { AdminRoutingModule } from './admin/admin-routing.module';
 import { AdminModule } from './admin/admin.module';
+import { CustomSnackbarComponent } from './shared/custom-snackbar/custom-snackbar.component';
+import { MatIconModule } from '@angular/material/icon';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
+
 
 
 
@@ -39,6 +44,7 @@ import { AdminModule } from './admin/admin.module';
     ProductosComponent,
     //SaleReceiptComponentComponent,
     SaleReceiptComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -47,7 +53,11 @@ import { AdminModule } from './admin/admin.module';
     HttpClientModule,
     RouterModule.forRoot([]), // o tu configuración real
     AdminRoutingModule,
-    AdminModule
+    AdminModule,
+    MatIconModule,
+    BrowserAnimationsModule,
+    MatAutocompleteModule
+
 
   ],
   providers: [

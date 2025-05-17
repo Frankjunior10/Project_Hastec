@@ -1,0 +1,44 @@
+.contenedor {
+  padding: 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.formulario-fechas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.error-text {
+  color: red;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.info-text {
+  margin-top: 20px;
+  font-style: italic;
+  color: #555;
+}
+
+.tabla-detalle {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.detalle-venta {
+  padding: 10px 0;
+}
+
+.error-text {
+  color: red;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.mat-elevation-z8 {
+  margin-top: 10px;
+}

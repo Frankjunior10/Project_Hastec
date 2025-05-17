@@ -1,10 +1,3 @@
-.custom-snackbar-panel {
-  background-color: #323232;
-  border: 1px solid #4caf50;
-  border-radius: 8px;
-  padding: 10px 20px;
-}
-
 .custom-snackbar {
   animation: fadeInScale 0.3s ease-in-out;
 }
